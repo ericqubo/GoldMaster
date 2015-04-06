@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>地产新闻-----中国房地产金融</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="中国房地产金融">
+<meta name="keywords" content="中国房地产金融">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--head end of-->
+<section class="swipePic">
+ <div class="swipe">
+   <h1></h1>
+   <dl>
+     <dt>指导单位：</dt><dd>中国房地产业协会</dd>
+     <dt>主管单位： </dt><dd>第一财经</dd>
+   </dl>
+   <ul id="slider">
+      <li style="display:block"><img src="images/flash/mainphoto-1.png" alt="中国房地产金融" /></li>
+      <li><img src="images/flash/mainphoto-2.png" alt="中国房地产金融" /></li>
+      <li><img src="images/flash/mainphoto-3.png" alt="中国房地产金融" /></li>
+      <li><img src="images/flash/mainphoto-4.png" alt="中国房地产金融" /></li>
+      <li><img src="images/flash/mainphoto-5.png" alt="中国房地产金融" /></li>
+      <li><img src="images/flash/mainphoto-6.png" alt="中国房地产金融" /></li>
+      <li><img src="images/flash/mainphoto-7.png" alt="中国房地产金融" /></li>
+   </ul>
+  <div id="pagenavi">
+      <a href="javascript:void(0);" class="active">1</a>
+      <a href="javascript:void(0);">2</a>
+      <a href="javascript:void(0);">3</a>
+      <a href="javascript:void(0);">4</a>
+      <a href="javascript:void(0);">5</a>
+      <a href="javascript:void(0);">6</a>
+      <a href="javascript:void(0);">7</a>
+  </div>
+ </div> 
+</section>
+<!--flashPic end of-->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/touchScroll.js"></script>
+<script src="js/touchslider.dev.js"></script>
+<script>
+var active=0,
+	as=document.getElementById('pagenavi').getElementsByTagName('a');
+for(var i=0;i<as.length;i++){
+	(function(){
+		var j=i;
+		as[i].onclick=function(){
+			t2.slide(j);
+			return false;
+		}
+ })();
+}
+var t2=new TouchSlider({id:'slider', speed:200, timeout:6000, before:function(index){
+  as[active].className='';
+  active=index;
+  as[active].className='active';
+}});
+</script>
+</html>

@@ -1,0 +1,126 @@
+﻿<div>
+  <header class="head">
+    <h1 class="fl list">
+      <span>
+        新闻<!--&nbsp;&nbsp;|<span id="groupName">地产新闻</span>-->
+      </span>
+    </h1>
+    <!--<div id="listArrow">
+      <span class="listArrow"></span>
+    </div>-->
+  </header>
+  <div class="subNav" id="subNav">
+    <ul>
+      <code></code>
+      <!--<li>
+        <span>
+          <i class="subIcon_1"></i>金融峰会
+        </span>
+      </li>
+      <li>
+        <span>
+          <i class="subIcon_2"></i>Leader Club
+        </span>
+      </li>
+      <li>
+        <span>
+          <i class="subIcon_3"></i>房地产金融理事会
+        </span>
+      </li>
+      <li>
+        <span>
+          <i class="subIcon_3"></i>金主高尔夫
+        </span>
+      </li>
+      <li class="noLine">
+        <span>
+          <i class="subIcon_4"></i>臻品私享
+        </span>
+      </li>-->
+    </ul>
+  </div>
+  <section data-role="scrollerSection">
+    <div class="scroller-body">
+      <div class="pullDown" data-minscrolly="57">
+        <span class="pullDownIcon"></span>
+        <span class="pullDownLabel">下拉可以刷新...</span>
+        <p class="pullDate"></p>
+      </div>
+      <div class="scroller-content">
+
+        <div class="flash">
+          <div class="banner">
+            <div id="newsList-wrapper" style="overflow: hidden">
+              <div id="newsList-scroller">
+                <ul id="thelist">
+                  <!--<li data-forhash="#newsDetail/1" data-transition="slideLeft">
+                    <p class="thelistp">厦大经济学家判断:中国房地产</p>
+                    <span>
+                      <img src="images/flash/flash_1.png" style="width: 320px;height:163px;">
+                                </span>
+                  </li>
+                  <li data-forhash="#newsDetail/1" data-transition="slideLeft">
+                    <p class="thelistp">意外的恋爱时光 Love Speaks (2013)</p>
+                    <span>
+                      <img src="images/flash/flash_2.png" style="width: 320px;height:163px;">
+                                </span>
+                  </li>
+                  <li data-forhash="#newsDetail/1" data-transition="slideLeft">
+                    <p class="thelistp">金枝欲孽2 金枝慾孽貳 (2013)</p>
+                    <span>
+                      <img src="images/flash/flash_3.png" style="width: 320px;height:163px;">
+                                </span>
+                  </li>-->
+                </ul>
+              </div>
+            </div>
+            <div id="nav">
+              <!--<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">← prev</div>-->
+              <ul id="indicator">
+                <!--<li class="active">1</li>
+                <li class="">1</li>
+                <li class="">1</li>-->
+              </ul>
+              <!--<div id="next" onclick="myScroll.scrollToPage('next', 0);return false">next →</div>-->
+            </div>
+            <div class="clr"></div>
+          </div>
+        </div>
+        <!--flash end of-->
+        <div class="line">
+          <ul>
+            <li class="redLine"></li>
+            <li class="blueLine"></li>
+          </ul>
+        </div>
+        <!--line end of-->
+        <div class="newsList-body">
+          <ul>
+            
+            <!--<li data-forhash="#newsDetail/1" data-transition="slideLeft">
+              <div>
+                <div class="pic_box">
+                  <img width="96px" height="80px" src="images/20140529194524591.jpg">
+                        </div>
+                <div class="title_box">《苏州房地产经纪业自律公约》出炉 </div>
+                <div class="active_box">前天（5月29日），市房地产经纪业商会全体会议通过了《苏州房地产经纪业自律公约》，40家行业骨干企业共同签署了《公约》，公开承诺自觉维护客户合法权益，保守客户信息秘密，不利用客户信息从事任何与向客户作出承诺无关的活动。</div>
+                <div class="time_box">
+                  <span>0</span>
+                  <code>0</code>
+                  <cite>06月01日</cite>
+                </div>
+              </div>
+            </li>-->
+          </ul>
+        </div>
+        <!--newsList end of-->
+      </div>
+      <div class="pullUp none">
+        <span class="pullUpIcon"></span>
+        <span class="pullUpLabel"></span>
+      </div>
+    </div>
+  </section>
+
+  <%= mad.view.render({ url : app.templateUrlDict.footer},{ pageName: "newsList" }) %>
+</div>

@@ -1,0 +1,18 @@
+﻿<%
+    if(list != null && list.length > 0) {
+        for(var i = 0;i < list.length; i++) {
+        var item = list[i];
+     %>
+<li data-forhash="#eventDetail/<%= item.ID %>" data-transition="slideLeft">
+    <span>
+        <!--<p>银行间市场拟试水项目收益票据 地方融资再开</p>-->
+        <div class="pic_box">
+            <img style="width:120px;height:84px;" src="<%= item.ImageUrl %>" alt="除房企谁还在淘金地产:险成新秀" />
+        </div>
+        <div class="article_box"><%= item.Name %></div>
+        <div class="time_box"><cite>举办时间：<%= util.dateFormat(new Date(item.ActivityDate), 'yyyy-MM-dd') %></cite></div>
+    </span>
+</li>
+<% }}else{ %>
+<div class="nothing">没有更多的相关活动了~</div>
+<%} %>

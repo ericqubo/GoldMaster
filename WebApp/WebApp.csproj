@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B53EB5F-B638-4F3D-9EB3-D6F2B94336C0}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\package\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\package\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <HintPath>..\package\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MagazController.cs" />
+    <Compile Include="Controllers\MyHomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\VedioController.cs" />
+    <Compile Include="Filters\UserTokenAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\ConfigHelper.cs" />
+    <Compile Include="Lib\DataDict_Error.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Source\css\font\vjs.svg" />
+    <Content Include="Source\css\mad.css" />
+    <Content Include="Source\css\social.umeng\css\social.umeng.css" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\back.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\send.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\send_disable.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_douban_off.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_douban_on.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_facebook.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_gmail.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_google.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_qq_off.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_qq_on.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_qzone_off.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_qzone_on.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_renren_off.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_renren_on.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_sina_off.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_sina_on.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_sms.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_twitter.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_tx_off.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_tx_on.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_wechat.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_wechat_gray.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_wxcircle.png" />
+    <Content Include="Source\css\social.umeng\img\social.umeng\umeng_socialize_wxcircle_gray.png" />
+    <Content Include="Source\css\style.css" />
+    <Content Include="Source\css\video-js.css" />
+    <Content Include="Source\images\arrowIcon.png" />
+    <Content Include="Source\images\backicon.png" />
+    <Content Include="Source\images\divMask.png" />
+    <Content Include="Source\images\FavIcon.png" />
+    <Content Include="Source\images\forwardIcon.png" />
+    <Content Include="Source\images\homeIcon.png" />
+    <Content Include="Source\images\logo.png" />
+    <Content Include="Source\images\mainphoto.png" />
+    <Content Include="Source\images\menubg.png" />
+    <Content Include="Source\images\menuIcon40x40.png" />
+    <Content Include="Source\images\navIcon.png" />
+    <Content Include="Source\images\newfootIcon_1.png" />
+    <Content Include="Source\images\newfootIcon_2.png" />
+    <Content Include="Source\images\newfootIcon_3.png" />
+    <Content Include="Source\images\newfootIcon_4.png" />
+    <Content Include="Source\images\newfootIcon_5.png" />
+    <Content Include="Source\images\newfootIcon_6.png" />
+    <Content Include="Source\images\newfootIcon_7.png" />
+    <Content Include="Source\images\newfootIcon_8.png" />
+    <Content Include="Source\images\next.png" />
+    <Content Include="Source\images\noticeIcon.png" />
+    <Content Include="Source\images\prev.png" />
+    <Content Include="Source\images\pull-icon%402x.png" />
+    <Content Include="Source\images\searchIcon.png" />
+    <Content Include="Source\images\shareIcon.png" />
+    <Content Include="Source\images\starcIcon.png" />
+    <Content Include="Source\images\unFavIcon.png" />
+    <Content Include="Source\index.html">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\index.js" />
+    <Content Include="Source\js\app\app.js" />
+    <Content Include="Source\js\app\controllers\eventDetail.js" />
+    <Content Include="Source\js\app\controllers\eventFavList.js" />
+    <Content Include="Source\js\app\controllers\eventList.js" />
+    <Content Include="Source\js\app\controllers\eventYuYue.js" />
+    <Content Include="Source\js\app\controllers\newsFavList.js" />
+    <Content Include="Source\js\app\controllers\seach.js" />
+    <Content Include="Source\js\app\controllers\videoDetail_bakup.js" />
+    <Content Include="Source\js\app\controllers\videoDetail.js" />
+    <Content Include="Source\js\app\controllers\fav.js" />
+    <Content Include="Source\js\app\controllers\fav_Magaz.js" />
+    <Content Include="Source\js\app\controllers\magazFavList.js" />
+    <Content Include="Source\js\app\controllers\videoList.js" />
+    <Content Include="Source\js\app\controllers\myHome.js" />
+    <Content Include="Source\js\app\global.js" />
+    <Content Include="Source\js\app\controllers\magazList.js" />
+    <Content Include="Source\js\app\controllers\newsDetail.js" />
+    <Content Include="Source\js\app\controllers\newsList.js" />
+    <Content Include="Source\js\app\controllers\magazDetail.js" />
+    <Content Include="Source\js\app\start.js" />
+    <Content Include="Source\js\libs\ejs.js" />
+    <Content Include="Source\js\libs\html2canvas.js" />
+    <Content Include="Source\js\libs\iscroll-4.2.5.js" />
+    <Content Include="Source\js\libs\json2.js" />
+    <Content Include="Source\js\libs\mad.js" />
+    <Content Include="Source\js\libs\platform\android\cordova.js" />
+    <Content Include="Source\js\libs\platform\android\cordova_plugins.js" />
+    <Content Include="Source\js\libs\platform\android\plugins\com.phonegap.plugins.sqllite\www\sqllite.js" />
+    <Content Include="Source\js\libs\platform\android\plugins\org.apache.cordova.device\www\device.js" />
+    <Content Include="Source\js\libs\platform\ios\cordova.js" />
+    <Content Include="Source\js\libs\platform\ios\cordova_plugins.js" />
+    <Content Include="Source\js\libs\platform\ios\plugins\com.phonegap.plugins.sqllite\www\sqllite.js" />
+    <Content Include="Source\js\libs\platform\ios\plugins\org.apache.cordova.device\www\device.js" />
+    <Content Include="Source\js\libs\social.umeng.js" />
+    <Content Include="Source\js\libs\video.js" />
+    <Content Include="Source\js\libs\zepto.js" />
+    <Content Include="Source\js\views\eventList_hot.ejs" />
+    <Content Include="Source\js\views\magazList.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\footer.ejs" />
+    <Content Include="Source\js\views\myHome.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\myfavItem.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\eventList_item.ejs" />
+    <Content Include="Source\js\views\magazFavList.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\videoList.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\videoDetail.ejs" />
+    <Content Include="Source\js\views\newsList_hot.ejs" />
+    <Content Include="Source\js\views\newsDetail.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\newsList.ejs" />
+    <Content Include="Source\js\views\magazDetail.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\eventList.ejs" />
+    <Content Include="Source\js\views\eventDetail.ejs" />
+    <Content Include="Source\js\views\eventYuYue.ejs" />
+    <Content Include="Source\js\views\fav.ejs" />
+    <Content Include="Source\js\views\fav_Magaz.ejs" />
+    <Content Include="Source\app.json" />
+    <Content Include="Source\js\views\magazItem.ejs">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Source\js\views\newsList_item.ejs" />
+    <Content Include="Source\js\views\videoList_item.ejs" />
+    <Content Include="Source\js\views\newsFavList.ejs" />
+    <Content Include="Source\css\font\vjs.eot" />
+    <Content Include="Source\css\font\vjs.ttf" />
+    <Content Include="Source\css\font\vjs.woff" />
+    <Content Include="Source\js\views\seach.ejs" />
+    <Content Include="Source\js\views\eventFavList.ejs" />
+    <None Include="Source\js\_references.js" />
+    <Content Include="Source\lib_b.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KCommonLib\KCommonLib.csproj">
+      <Project>{b4026533-08dd-497f-b6e3-0bdb08706cb5}</Project>
+      <Name>KCommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{3e31252a-2a10-4179-8f6f-e308a9a393c3}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

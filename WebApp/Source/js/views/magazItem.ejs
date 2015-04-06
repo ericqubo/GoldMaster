@@ -1,0 +1,18 @@
+﻿<%
+var width=$(window).width()*0.46;
+  var height=$(window).width()*0.46*1.68;
+  if(magazListData.length>0){ for(var i=0;i< magazListData.length ; i++){ 
+                %>
+
+                <dl style="height:<%= height %>px;width:<%= width %>px;overflow:hidden;">
+                    <dt>
+                        <a data-forhash="#magazDetail/<%= magazListData[i].ID %>" data-transition="slideLeft">
+                            <img src="<%= magazListData[i].ImgUrl %>" alt="<%= magazListData[i].Desc %>" style="height:<%= height-42 %>px; width:auto; overflow:hidden;" />
+                        </a>
+                    </dt>
+                    <dd><%= magazListData[i].Title %></dd>
+                </dl>
+<% }} else { %>
+            <div style="clear:both;" class="nothing">没有更多杂志了</div>
+
+<% } %>

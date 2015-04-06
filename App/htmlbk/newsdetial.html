@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>地产新闻-----中国房地产金融</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="中国房地产金融">
+    <meta name="keywords" content="中国房地产金融">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+    <header class="head">
+        <h2 class="goBack" onclick="$.mobile.changePage('newslist.aspx', { transition: 'slide' });"></h2>
+        地产新闻
+        <h3 class="noticeIcon"><a href="#"></a></h3>
+    </header>
+    <!--head end of-->
+    <section class="flashPic">
+        <a href="#">
+            <dl>事业单位工资不再与机关捆绑 专家称长</dl>
+            <img src="images/flash/flash_1.png" alt="事业单位工资不再与机关捆绑 专家称长" />
+        </a>
+        <div class="line"><ul><li class="redLine"></li><li class="blueLine"></li></ul> </div>
+    </section>
+    <!--flashPic end of-->
+    <section class="newsCotnet">
+        <dl>
+            <dt>前天（5月29日），市房地产经纪业商会全体会议通律公约》，40家行业前天（5月29日），市房地产经纪业房地产经纪业自律公约》，40家行业</dt>
+            <dd>年以来，房地产市场形势多变，房地两头夹击；房地产经纪业内恶意竞争，挖人单等乱象丛生，行业面临生存危机。为维护经纪行业现状，刚成立2个月的苏州市房地位多次讨论、反复修改，制定了《苏州房地</dd>
+            <dd>
+                年以来，房地产市场形势多变，房地两头夹击；房地产经纪业内恶意竞争，挖人单等乱象丛生，行业面临生存危机。为维护经纪行业现状，刚成立2个月的苏州市房地
+                位多次讨论、反复修改，制定了《苏州房地
+            </dd>
+            <dd>新华网北京6月26日电 6月26日，国家主席习近平致电在赤道几内亚首都马拉博举行的非洲联盟第二十三届首脑会议，对会议的召开向非洲国家和人民表示祝贺。苏州房地</dd>
+        </dl>
+    </section>
+    <!--newCotnet end of-->
+    <footer class="newsFoot">
+        <a href="javascript:;">
+            <dl><dt class="newfootIcon_1"></dt><dd>收藏</dd></dl>
+        </a>
+        <a href="javascript:;">
+            <dl><dt class="newfootIcon_2"></dt><dd>分享</dd></dl>
+        </a>
+        <a href="javascript:;" id="newfootIcon_3">
+            <dl><dt class="newfootIcon_3"></dt><dd>放大</dd></dl>
+        </a>
+        <a href="javascript:;">
+            <dl><dt class="newfootIcon_4"></dt><dd>缩小</dd></dl>
+        </a>
+        <a href="javascript:;" class="newsFootBg">
+            <dl><dd class="searchIcon"></dd></dl>
+        </a>
+    </footer>
+    <script>
+        //newfootIcon_3
+        $(".newfootIcon_3").click(function () {
+            $(".newsCotnet > dl > dt,.newsCotnet > dl > dd").css("font-size", "24px");
+        })
+        $(".newfootIcon_4").click(function () {
+            $(".newsCotnet > dl > dt,.newsCotnet > dl > dd").css("font-size", "12px");
+        })
+    </script>
+</html>

@@ -1,0 +1,35 @@
+﻿<%
+    if(list != null && list.length > 0) {
+        for(var i = 0;i < list.length; i++) {
+        var item = list[i];
+		var _createDate = new Date(item.CreateDate);
+		var _dateStr = util.dateFormat(_createDate, 'MM月dd日');
+		var _week = weekDict[_createDate.getDay()];
+
+		if(newsDateTitle != _dateStr){
+			newsDateTitle = _dateStr;
+
+			%>
+			<div class="week">
+				<div><%= _dateStr %>&nbsp;<%= _week %></div>
+			</div>
+			<% 
+		}
+     %>
+<li data-forhash="#newsDetail/<%= item.ID %>" data-transition="slideLeft">
+    <div>
+        <div class="pic_box" style="float:right;">
+            <img style="width:120px;height:74px;" src="<%= item.ImgUrl %>">
+        </div>
+        <div class="title_box" style="height:74px;width:165px;"><%= item.Title %></div>
+        <!--<div class="active_box"><%= item.Discrption %></div>
+        <div class="time_box">
+            <span><%= item.FavCount %></span>
+            <code><%= item.ShareCount %></code>
+            <cite><%= _dateStr %></cite>
+        </div>-->
+    </div>
+</li>
+<% }}else{ %>
+<div class="nothing">没有更多的相关新闻了~</div>
+<%} %>

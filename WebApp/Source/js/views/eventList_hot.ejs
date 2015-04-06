@@ -1,0 +1,12 @@
+﻿<%
+    if(list != null && list.length > 0) {
+        for(var i = 0;i < list.length; i++) {
+        var item = list[i];
+     %>
+<li data-forhash="#eventDetail/<%= item.ID %>" data-transition="slideLeft">
+    <p class="thelistp"><%= item.Name %></p>
+    <span>
+        <img src="<%= item.ImageUrl %>" style="width: 320px; height: 163px;">
+    </span>
+</li>
+<%} }%>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>demo</title>
+</head>
+<body>
+
+    <div id="mad-outer">
+        <div id="container" class="clearfixed">
+            
+        </div>
+    </div>
+     
+    <div id="alertBox" class="alertBox" style="display: none;">
+        <p class="alertTitle">提示</p>
+        <div class="alertText">点击确认点击确认</div>
+        <span class="alertConfirm btnOk">确定</span>
+        <span class="alertConfirm btnCancel">取消</span>
+    </div>
+
+    <div class="tip" style="display: none;">
+        <div class="alertText">点击确认点击确认</div>
+    </div>
+
+    <div class="ajaxLoading" style="display: none;">
+        <div class="transformLoading"></div>
+        <p class="loading-content">努力加载中，请稍候...</p>
+    </div>
+
+    <div class="ajaxLoadingHighlight" style="display: none;">
+        <div class="transformLoading"></div>
+        <p class="loading-content">努力加载中，请稍候...</p>
+    </div>
+    <div class="mask none">
+    </div>
+
+    <script src="lib_b.js"></script>
+    <script type="text/javascript">
+        var _appVersion = "1.0.0";
+        var _isDebug = true;
+        var _type = 0;
+
+        var _apiDomain = "http://cbngoldapp.114xc.net/";
+        var _sourceDomain = _apiDomain + "Source/";
+
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+
+        if (_type == 1) {
+            var ga = document.createElement('script'); ga.type = 'text/javascript';
+            ga.async = false;
+            ga.src = "/Source/js/libs/platform/android/cordova.js";
+            $("body").append(ga);
+        }
+        else if (_type == 2) {
+            var ga = document.createElement('script'); ga.type = 'text/javascript';
+            ga.async = false;
+            ga.src = "/Source/js/libs/platform/ios/cordova.js";
+            $("body").append(ga);
+        }
+        //videojs.options.flash.swf = "video-js.swf";
+
+        var index = document.createElement('script'); ga.type = 'text/javascript';
+        ga.async = false;
+        ga.src = _sourceDomain + "index.js";
+        $("body").append(ga);
+
+        
+    </script>   
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<%
+    if(videoListData != null && videoListData.length > 0) {
+        for(var i = 0;i < videoListData.length; i++) {
+        var item = videoListData[i];
+     %>
+<li data-forhash="#videoDetail/<%= item.ID %>" data-transition="slideLeft">
+    <div>
+        <div class="pic_box">
+            <img style="width:120px;height:84px;" src="<%= item.IntroImage %>">
+            </div>
+        <div class="title_box"><%= item.Title %></div>
+        <!--<div class="active_box"><%= item.Content %></div>-->
+        <div class="time_box">
+           
+            <cite><%= util.dateFormat(new Date(item.CreateDate), 'MM月dd日') %></cite>
+        </div>
+    </div>
+</li>
+<% }}else{ %>
+<div class="nothing">没有更多的相关视频了~</div>
+<%} %>

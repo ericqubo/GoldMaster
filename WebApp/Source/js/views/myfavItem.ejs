@@ -1,0 +1,34 @@
+<% for(var i=0;i< favList.length ; i++){ 
+   var name;
+   var url;
+   if(favList[i].Type==1)
+   {
+      name="新闻收藏";
+      url="#newsFavList";
+   }
+   else if(favList[i].Type==2)
+   {
+     name="杂志收藏";
+      url="#magazFavList";
+   }
+   else
+   {
+     name="活动收藏";
+      url="#eventFavList";
+   }
+   var count=0;
+   if(favList[i].Count>0)
+   {
+       count=favList[i].Count;
+   }
+  %>
+<div class="item clearfixed" data-forhash="<%= url %>" data-transition="slideLeft" >
+  <div class="tit"><%= name %></div>
+  <% if(count==0) {%>
+  <div class="num none"></div>
+   <% } else { %>
+   <div class="num none" style="display:block"><%= count %></div>
+   <% } %>
+  <div class="ico ico-more fr"></div>
+</div>
+<% } %>

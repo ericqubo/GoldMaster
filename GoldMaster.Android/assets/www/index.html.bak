@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>CBN</title>
+    <script src="cordova.js"></script>
+    <style>
+        .bgLoadPre {
+            width: 100%;
+            height: 100%;
+            background: url('img/splash.png') no-repeat;
+            background-size: 100% 100%;
+            margin: 0px;
+        }
+
+        .tap-highlight-color {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -moz-tap-highlight-color: rgba(0,0,0,0);
+            -ms-tap-highlight-color: rgba(0,0,0,0);
+            -o-tap-highlight-color: rgba(0,0,0,0);
+            tap-highlight-color: rgba(0,0,0,0);
+        }
+    </style>
+</head>
+<body class="bgLoadPre">
+
+    <script src="lib_b.js"></script>
+    <script type="text/javascript">
+        var _appVersion = "1.0.0.0";
+        var _type = 1;
+        //var _websitePath = "http://192.168.191.1:1000/";
+        var _apiDomain = "http://cbngoldapp.114xc.net/";
+		var _sourceDomain = _apiDomain + "Source/";
+        var _isDebug = false;
+        var _isIos = false;
+        var _isAndroid = true;
+
+    </script>
+    <script>
+        var _isLoading = false;
+        function indexRefresh() {
+            if (_isLoading) {
+                return;
+            }
+            startapp.receiveEvent();
+        }
+        function LoadData() {
+            var script = document.createElement("script");
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("src", "http://cbngoldapp.114xc.net/Source/index.js");
+            $("body").append(script);
+        }
+        try {
+            var startapp = {
+                initialize: function () {
+                    
+                    this.bindEvents();
+                },
+
+                bindEvents: function () {
+             
+                    document.addEventListener('deviceready', this.onDeviceReady, false);
+                    //startapp.receiveEvent();
+                },
+
+                onDeviceReady: function () {
+             
+                    startapp.receiveEvent();
+                },
+                receiveEvent: function () {
+               
+                    var windowH = $(window).height();
+                    
+                   
+                    $("body").css("height", windowH + "px");
+                    $(".preLoadRefresh").css("height", windowH + "px");
+                    $(".preLoadRefresh").css("line-height", windowH + "px");
+                    if (navigator.network.connection.type == "none" ) {
+                        _isLoading = false;
+                        //生成刷新按钮
+                        if ($(".preLoadRefresh")) {
+                            $(".preLoadRefresh").html("连接网络成功后，请点击页面刷新");
+                        }
+                        var args = [{ page: cordova.plugins.showIntent.settings.WirelessSettings }];
+                        cordova.plugins.showIntent.ShowSystemPage(function () {
+
+                        }, function (e) {
+
+                        }, args);
+                    }
+                    else {
+                        _isLoading = true;
+                        if ($(".preLoadRefresh")) {
+                            $(".preLoadRefresh").html("玩命载入中...");
+                        }
+                        LoadData();
+                }
+                
+                    LoadData();
+                }
+            };
+            startapp.initialize();
+        }
+        catch (e) {
+            alert(e);
+        }
+    </script>
+    <div class="preLoadRefresh tap-highlight-color" onclick="indexRefresh()" style="text-align: center; height: 100%; width: 100%; font-size: 18px; color: #fff;"></div>
+<div id="mad-outer">
+        <div id="container" class="clearfixed">
+            
+        </div>
+    </div>
+     
+    <div id="alertBox" class="alertBox" style="display: none;">
+        <p class="alertTitle">提示</p>
+        <div class="alertText">点击确认点击确认</div>
+        <span class="alertConfirm btnOk">确定</span>
+        <span class="alertConfirm btnCancel">取消</span>
+    </div>
+
+    <div class="tip" style="display: none;">
+        <div class="alertText">点击确认点击确认</div>
+    </div>
+
+    <div class="ajaxLoading" style="display: none;">
+        <div class="transformLoading"></div>
+        <p class="loading-content">努力加载中，请稍候...</p>
+    </div>
+
+    <div class="ajaxLoadingHighlight" style="display: none;">
+        <div class="transformLoading"></div>
+        <p class="loading-content">努力加载中，请稍候...</p>
+    </div>
+    <div class="mask none">
+    </div>
+</body>
+</html>
